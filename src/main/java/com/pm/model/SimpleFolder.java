@@ -2,11 +2,11 @@ package com.pm.model;
 
 import java.util.Objects;
 
-public class RandomFolder implements Folder {
+public class SimpleFolder implements Folder {
     private final String name;
     private final String size;
 
-    public RandomFolder(String name, String size) {
+    public SimpleFolder(String name, String size) {
         this.name = name;
         this.size = size;
     }
@@ -21,7 +21,7 @@ public class RandomFolder implements Folder {
 
     @Override
     public boolean equals(Object o) {
-        if (!(o instanceof RandomFolder that)) return false;
+        if (!(o instanceof SimpleFolder that)) return false;
         return Objects.equals(name, that.name) && Objects.equals(size, that.size);
     }
 

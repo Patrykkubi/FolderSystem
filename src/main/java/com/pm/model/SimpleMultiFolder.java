@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class RandomMultiFolder implements MultiFolder {
+public class SimpleMultiFolder implements MultiFolder {
 
     private final String name;
     private final String size;
     private final List<Folder> folders;
 
-    public RandomMultiFolder(String name, String size, List<Folder> folders) {
+    public SimpleMultiFolder(String name, String size, List<Folder> folders) {
         this.name = name;
         this.size = size;
         this.folders = new ArrayList<>(folders);
@@ -30,7 +30,7 @@ public class RandomMultiFolder implements MultiFolder {
 
     @Override
     public boolean equals(Object o) {
-        if (!(o instanceof RandomMultiFolder that)) return false;
+        if (!(o instanceof SimpleMultiFolder that)) return false;
         return Objects.equals(name, that.name) && Objects.equals(size, that.size) && Objects.equals(folders, that.folders);
     }
 
